@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+scikit-learn  # If your model is built with scikit-learn
+joblib  # For loading the model
