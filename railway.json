@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "PORT": "3000"  // Optional: set the port if necessary
+      "PORT": "3000"  
     }
   },
   "start": {
