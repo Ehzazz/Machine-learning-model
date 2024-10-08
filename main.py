@@ -38,4 +38,4 @@ def predict(data: InputData):
 # Optional: Define a root endpoint to check if the API is running
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Prediction API!"}
+    return {"message": "Welcome to the Prediction API !!!"}
