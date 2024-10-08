@@ -1,4 +1,4 @@
-import joblib  # Make sure to have joblib installed or use pickle if that’s what you prefer
+import joblib
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
@@ -14,7 +14,6 @@ class InputData(BaseModel):
     feature4: float
     feature5: float
 
-
 # Create the FastAPI app
 app = FastAPI()
 
@@ -28,14 +27,13 @@ def predict(data: InputData):
         data.feature3,
         data.feature4,
         data.feature5
-        
     ]]
     
     # Make prediction using the model
     prediction = model.predict(features)
     
     # Return the prediction as a JSON response
-    return JSONResponse(content={"prediction": prediction[0]})  # Assuming prediction is a single value
+    return JSONResponse(content={"prediction": prediction[0]})
 
 # Optional: Define a root endpoint to check if the API is running
 @app.get("/")
